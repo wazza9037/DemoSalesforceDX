@@ -47,6 +47,6 @@ pipeline {
     }
 	def getbranch()
 		{
-			return scm.branches[0].name;
+			return scm.branches[0].name
 		}
 }
