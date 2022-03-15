@@ -45,8 +45,9 @@ pipeline {
             }
         }
     }
-	def getbranch()
+	
+}
+def getbranch()
 		{
 			return scm.branches[0].name
 		}
-}
