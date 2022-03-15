@@ -26,7 +26,7 @@ pipeline {
             steps {
 					script{
 							// SFDX auth commands
-							sfdx auth:jwt:grant -u ${USERNAME} -f ${SERVERKEY} -i ${CONSUMERKEY} -r ${INSTANCEURL}
+							"sfdx auth:jwt:grant -u ${USERNAME} -f ${SERVERKEY} -i ${CONSUMERKEY} -r ${INSTANCEURL}"
 							}
             }
         }
