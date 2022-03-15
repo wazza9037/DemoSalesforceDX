@@ -35,11 +35,11 @@ pipeline {
 					script{
 					if(CURRENTBRANCH.contains("PR-"))
 						{
-						 sfdx force:source:deploy -p force-app -u USERNAME -c
+						 "sfdx force:source:deploy -p force-app -u USERNAME -c"
 						}
 					else
 						{
-						 sfdx force:source:deploy -p force-app -u USERNAME 
+						 "sfdx force:source:deploy -p force-app -u USERNAME "
 						}
 					}
             }
