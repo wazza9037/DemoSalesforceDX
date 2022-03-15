@@ -2,7 +2,7 @@ pipeline {
     agent {
         // Define agent details here
 		
-		docker { image 'salesforce/salesforcedx:latest-full'
+		docker { image 'salesforce/salesforcedx:7.139.0-full'
 				 args '-u 0:0'
 				 } 
     }
