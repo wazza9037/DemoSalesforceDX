@@ -3,7 +3,7 @@ pipeline {
         // Define agent details here
 		
 		docker { 
-				 image 'rawdee/sfdx'
+				 image 'salesforcedx-docker'
 				 
 				 } 
     }
