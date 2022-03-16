@@ -3,7 +3,7 @@ pipeline {
         // Define agent details here
 		
 		docker { 
-				 image 'node:latest'
+				 image '2004-amd64'
 				 
 				 } 
     }
