@@ -1,11 +1,5 @@
 pipeline {
-    agent {
-        // Define agent details here
-		
-		docker { 
-				 image 'node:latest'
-				 } 
-    }
+    agent any
 	environment {
                // BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
 			   USERNAME='abhirupsengupta20@gmail.com'
