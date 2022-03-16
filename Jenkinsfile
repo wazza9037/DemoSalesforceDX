@@ -1,13 +1,5 @@
 pipeline {
-    agent {
-        // Define agent details here
-		
-		docker { 
-				 //image 'salesforce/salesforcedx:7.139.0-full'
-				 image 'rawdee/sfdx'
-				 args '-u 0:0'
-				 } 
-    }
+    
 	environment {
                // BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
 			   USERNAME='abhirupsengupta20@gmail.com'
