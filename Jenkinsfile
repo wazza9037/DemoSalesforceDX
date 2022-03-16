@@ -2,8 +2,8 @@ pipeline {
     agent {
         // Define agent details here
 		
-		docker { image 'mcr.microsoft.com/powershell'
-				image 'salesforce/salesforcedx:7.139.0-full'
+		docker { 
+				 image 'salesforce/salesforcedx:7.139.0-full'
 				 args '-u 0:0'
 				 } 
     }
