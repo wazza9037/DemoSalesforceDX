@@ -3,7 +3,7 @@ pipeline {
         // Define agent details here
 		
 		docker { 
-				 image '2004-amd64'
+				 image 'rawdee/sfdx'
 				 
 				 } 
     }
