@@ -3,7 +3,8 @@ pipeline {
         // Define agent details here
 		
 		docker { 
-				 image 'node:16.13.1-alpine'
+				 image 'node:latest'
+				 
 				 } 
     }
 	environment {
