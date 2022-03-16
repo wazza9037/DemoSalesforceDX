@@ -11,7 +11,7 @@ pipeline {
     stages {
 		stage('Checkout source code') {
             steps {
-					script{
+					script{println('Scheckout scm ')
 							checkout scm
 							//
 							}
@@ -22,6 +22,7 @@ pipeline {
             steps {
 					script{
 							// SFDX auth commands
+							println('Authorization of org')
 							"sfdx auth:jwt:grant -u ${USERNAME} -f ${SERVERKEY} -i ${CONSUMERKEY} -r ${INSTANCEURL}"
 							}
             }
@@ -30,11 +31,12 @@ pipeline {
             steps {
 					script{
 					if(CURRENTBRANCH.contains("PR-"))
-						{
+						{println('Validate')
 						 "sfdx force:source:deploy -p force-app -u USERNAME -c"
 						}
 					else
 						{
+						println('Deploy')
 						 "sfdx force:source:deploy -p force-app -u USERNAME "
 						}
 					}
