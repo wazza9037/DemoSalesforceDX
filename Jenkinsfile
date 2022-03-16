@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        // Define agent details here
-		
-		docker { image 'salesforce/salesforcedx:latest-full' } 
-    }
+    agent any
 	environment {
                // BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
 			   USERNAME='abhirupsengupta20@gmail.com'
@@ -45,8 +41,9 @@ pipeline {
             }
         }
     }
-	def getbranch()
+	
+}
+def getbranch()
 		{
 			return scm.branches[0].name
 		}
-}
