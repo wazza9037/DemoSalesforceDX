@@ -1,5 +1,5 @@
 pipeline {
-    
+    agent any
 	environment {
                // BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
 			   USERNAME='abhirupsengupta20@gmail.com'
