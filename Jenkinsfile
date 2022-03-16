@@ -3,8 +3,7 @@ pipeline {
         // Define agent details here
 		
 		docker { 
-				 image 'salesforce/salesforcedx:7.139.0-full'
-				 args '-u 0:0'
+				 image 'node:latest'
 				 } 
     }
 	environment {
@@ -16,6 +15,18 @@ pipeline {
 			   CURRENTBRANCH=getbranch();
             }
     stages {
+		stage('Install Salesforce CLI') {
+            steps {
+					script{
+							"wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz"
+							"mkdir ./sfdx"
+							"tar xJf sfdx-linux-x64.tar.xz -C ./sfdx --strip-components 1"
+							"export PATH=./sfdx/bin:$PATH"
+							
+							//
+							}
+            }
+			}
 		stage('Checkout source code') {
             steps {
 					script{
